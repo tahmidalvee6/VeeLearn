@@ -1,0 +1,2523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>VeeLearn | Learn. Build. Get Hired.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background: #f8faff;
+        color: #1e293b;
+      }
+      .grad-text {
+        background: linear-gradient(135deg, #3b82f6, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .grad-btn {
+        background: linear-gradient(135deg, #3b82f6, #6366f1);
+      }
+      .live-pulse {
+        animation: live-anim 1.5s ease infinite;
+      }
+      @keyframes live-anim {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 6px rgba(34, 211, 238, 0);
+        }
+      }
+      .pulse-dot {
+        animation: pulse-anim 2s ease infinite;
+      }
+      @keyframes pulse-anim {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 7px rgba(52, 211, 153, 0);
+        }
+      }
+      .spin-ring::before {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        background: conic-gradient(#3b82f6, #6366f1, #f59e0b, #3b82f6);
+        z-index: -1;
+        animation: spin 6s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="grad-btn text-white text-sm font-semibold text-center py-2.5 relative">
+      🎉 <strong>Special Offer:</strong> Get 75% OFF on all courses this weekonly!
+      <a href="#pricing" class="text-yellow-300 underline ml-1"
+        >Grab the deal →</a
+      >
+      <button
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-white/20 text-white text-xs flex items-center justify-center hover:bg-white/30"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+      class="bg-white/90 backdrop-blur fixed top-10 w-full z-40 border-b border-gray-200 shadow-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5">
+          <div
+            class="w-9 h-9 grad-btn rounded-lg flex items-center justify-center text-white font-black text-lg shadow-lg shadow-blue-500/30"
+          >
+            V
+          </div>
+          <span class="text-xl font-black text-gray-900"
+            >Vee<span class="text-blue-500">Learn</span></span
+          >
+        </a>
+        <!-- Nav Links -->
+        <nav class="hidden lg:flex items-center gap-1">
+          <a
+            href="#"
+            class="px-4 py-2 rounded-lg text-sm font-semibold text-blue-500 bg-blue-50"
+            >Home</a
+          >
+          <a
+            href="#courses-section"
+            class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition"
+            >Courses</a
+          >
+          <a
+            href="#about"
+            class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition"
+            >About Us</a
+          >
+          <a
+            href="#instructors"
+            class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition"
+            >Instructors</a
+          >
+          <a
+            href="#pricing"
+            class="px-4 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition"
+            >Pricing</a
+          >
+        </nav>
+        <!-- Buttons -->
+        <div class="flex items-center gap-2">
+          <a
+            href="#login"
+            class="hidden sm:block px-5 py-2 rounded-lg border border-blue-400 text-blue-500 text-sm font-bold hover:bg-blue-50 transition"
+            >Log In</a
+          >
+          <a
+            href="#login"
+            class="px-5 py-2 rounded-lg grad-btn text-white text-sm font-bold shadow-lg shadow-blue-500/20 hover:opacity-90 transition"
+            >Start Free →</a
+          >
+          <!-- Hamburger -->
+          <button
+            class="lg:hidden flex flex-col gap-1.5 w-9 h-9 bg-gray-100 rounded-lg items-center justify-center"
+          >
+            <span class="block w-4 h-0.5 bg-gray-600 rounded"></span>
+            <span class="block w-4 h-0.5 bg-gray-600 rounded"></span>
+            <span class="block w-4 h-0.5 bg-gray-600 rounded"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="pt-44 pb-24 min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-white to-indigo-50"
+    >
+      <div class="max-w-6xl mx-auto px-6 w-full">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left side -->
+          <div>
+            <!-- Live badge -->
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 bg-blue-50 text-sm font-semibold text-gray-600 mb-6"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-teal-400 live-pulse flex-shrink-0"
+              ></span>
+              🟢 Live Now: MERN Stack Bootcamp 2025 — Session 14 in progress
+            </div>
+            <h1
+              class="text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-5 text-gray-900"
+            >
+              Learn Without<br />Limits. Build
+              <span class="grad-text"> Real Skills.</span><br />Get Hired.
+            </h1>
+            <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg">
+              Join <strong class="text-gray-800">10,000+</strong> learners
+              mastering in-demand tech skills through hands-on, project-based
+              courses taught by real industry professionals.
+            </p>
+            <!-- Search box -->
+            <div
+              class="flex items-center bg-white rounded-2xl p-1.5 pl-4 mb-4 max-w-lg shadow-md border border-gray-200 focus-within:border-blue-400 transition"
+            >
+              <span class="text-lg mr-2">🔍</span>
+              <input
+                type="text"
+                placeholder="What do you want to learn today?"
+                class="flex-1 bg-transparent text-sm text-gray-700 placeholder:text-gray-400 outline-none py-2"
+              />
+              <button
+                class="px-5 py-2.5 rounded-xl grad-btn text-white font-bold text-sm flex-shrink-0"
+              >
+                Search
+              </button>
+            </div>
+            <!-- Trending tags -->
+            <div class="flex items-center flex-wrap gap-2 mb-8">
+              <span class="text-xs font-semibold text-gray-400">Trending:</span>
+              <span
+                class="px-3 py-1 rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 cursor-pointer hover:border-blue-400 hover:text-blue-500 transition"
+                >React</span
+              >
+              <span
+                class="px-3 py-1 rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 cursor-pointer hover:border-blue-400 hover:text-blue-500 transition"
+                >Python</span
+              >
+              <span
+                class="px-3 py-1 rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 cursor-pointer hover:border-blue-400 hover:text-blue-500 transition"
+                >Figma</span
+              >
+              <span
+                class="px-3 py-1 rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 cursor-pointer hover:border-blue-400 hover:text-blue-500 transition"
+                >Node.js</span
+              >
+              <span
+                class="px-3 py-1 rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 cursor-pointer hover:border-blue-400 hover:text-blue-500 transition"
+                >AWS</span
+              >
+            </div>
+            <!-- CTA buttons -->
+            <div class="flex items-center gap-4 flex-wrap mb-8">
+              <a
+                href="#courses-section"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl grad-btn text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:opacity-90 transition"
+                >Explore All Courses →</a
+              >
+              <button
+                class="inline-flex items-center gap-3 text-sm font-bold text-gray-500 hover:text-gray-800 transition"
+              >
+                <span
+                  class="w-11 h-11 rounded-full bg-white border border-gray-200 shadow flex items-center justify-center text-blue-500 text-sm"
+                  >▶</span
+                >
+                Watch Demo
+              </button>
+            </div>
+            <!-- Trust items -->
+            <div class="flex items-center flex-wrap gap-5">
+              <span class="flex items-center gap-1.5 text-sm text-gray-500"
+                ><span class="text-emerald-500">✅</span> No credit card
+                needed</span
+              >
+              <span class="flex items-center gap-1.5 text-sm text-gray-500"
+                ><span class="text-emerald-500">✅</span> 30-day
+                money-back</span
+              >
+              <span class="flex items-center gap-1.5 text-sm text-gray-500"
+                ><span class="text-emerald-500">✅</span> Lifetime access</span
+              >
+            </div>
+          </div>
+          <!-- Right side -->
+          <div>
+            <!-- Hero image -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl mb-4">
+              <img
+                src="https://i.pinimg.com/736x/60/75/b5/6075b5319c0f0c9852698eb9785c0dd0.jpg"
+                alt="Students learning"
+                class="w-full h-auto block"
+              />
+            </div>
+            <!-- Feature cards -->
+            <div class="grid grid-cols-2 gap-3">
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">🚀</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >Project-Based Learning</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Real-world projects you can add to your portfolio.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">🎓</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >95% Job Placement</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Career coaches, mock interviews & employer partnerships.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">🔴</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >Live Instructor Sessions</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Weekly live classes, Q&A and code reviews.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">🏆</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >Industry Certificates</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Recognised by top tech companies in 30+ countries.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">🌍</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >Global Community</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    10,000+ learners in Slack, Discord & study groups.
+                  </p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-2xl p-4 flex items-start gap-3 border border-gray-100 shadow-sm hover:border-blue-300 hover:-translate-y-1 transition"
+              >
+                <span class="text-2xl flex-shrink-0">⚡</span>
+                <div>
+                  <strong class="block text-xs font-black text-gray-800 mb-1"
+                    >Learn at Your Pace</strong
+                  >
+                  <p class="text-xs text-gray-500 leading-relaxed">
+                    Lifetime access with new modules added every month.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Stats strip -->
+        <div
+          class="bg-white rounded-2xl px-8 py-6 mt-16 flex items-center justify-center flex-wrap gap-0 shadow-lg border border-gray-100"
+        >
+          <div class="flex flex-col items-center px-8">
+            <span class="text-3xl font-black tracking-tight grad-text"
+              >10,000+</span
+            >
+            <span class="text-xs text-gray-400 mt-1">Active Students</span>
+          </div>
+          <div class="w-px h-12 bg-gray-200 flex-shrink-0"></div>
+          <div class="flex flex-col items-center px-8">
+            <span class="text-3xl font-black tracking-tight text-yellow-500"
+              >500+</span
+            >
+            <span class="text-xs text-gray-400 mt-1">Expert Courses</span>
+          </div>
+          <div class="w-px h-12 bg-gray-200 flex-shrink-0"></div>
+          <div class="flex flex-col items-center px-8">
+            <span class="text-3xl font-black tracking-tight text-emerald-500"
+              >50+</span
+            >
+            <span class="text-xs text-gray-400 mt-1">Top Instructors</span>
+          </div>
+          <div class="w-px h-12 bg-gray-200 flex-shrink-0"></div>
+          <div class="flex flex-col items-center px-8">
+            <span class="text-3xl font-black tracking-tight text-rose-500"
+              >95%</span
+            >
+            <span class="text-xs text-gray-400 mt-1">Job Placement Rate</span>
+          </div>
+          <div class="w-px h-12 bg-gray-200 flex-shrink-0"></div>
+          <div class="flex flex-col items-center px-8">
+            <span class="text-3xl font-black tracking-tight text-violet-500"
+              >4.9★</span
+            >
+            <span class="text-xs text-gray-400 mt-1">Average Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY -->
+    <section class="border-y border-gray-200 py-10 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <p
+          class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-6"
+        >
+          Our graduates work at top companies worldwide
+        </p>
+        <div class="flex items-center justify-center flex-wrap gap-10">
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Google</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Microsoft</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Amazon</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Meta</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Spotify</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Airbnb</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Netflix</span
+          >
+          <span
+            class="text-lg font-black text-gray-400 hover:text-gray-600 transition cursor-default"
+            >Shopify</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="py-24 bg-white" id="categories">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold tracking-widest uppercase text-blue-500 mb-4"
+            >📚 Browse by Topic</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            Explore Top <span class="grad-text">Categories</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            Find the perfect learning path in your favourite tech domain.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-blue-50"
+            >
+              💻
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              Web Development
+            </h3>
+            <p class="text-xs text-gray-400">HTML, CSS, JS, React</p>
+            <span class="text-xs font-bold text-blue-500">120 courses →</span>
+          </a>
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-purple-50"
+            >
+              🎨
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              UI/UX Design
+            </h3>
+            <p class="text-xs text-gray-400">Figma, Prototyping</p>
+            <span class="text-xs font-bold text-blue-500">85 courses →</span>
+          </a>
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-green-50"
+            >
+              🤖
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              Data Science & AI
+            </h3>
+            <p class="text-xs text-gray-400">Python, ML, TF</p>
+            <span class="text-xs font-bold text-blue-500">60 courses →</span>
+          </a>
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-orange-50"
+            >
+              📱
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              Mobile Dev
+            </h3>
+            <p class="text-xs text-gray-400">Flutter, React Native</p>
+            <span class="text-xs font-bold text-blue-500">48 courses →</span>
+          </a>
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-cyan-50"
+            >
+              ☁️
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              Cloud & DevOps
+            </h3>
+            <p class="text-xs text-gray-400">AWS, Docker, K8s</p>
+            <span class="text-xs font-bold text-blue-500">45 courses →</span>
+          </a>
+          <a
+            href="#courses-section"
+            class="bg-white border border-gray-200 rounded-2xl p-5 flex flex-col items-center gap-2.5 text-center hover:-translate-y-1 hover:border-blue-400 hover:shadow-md transition"
+          >
+            <div
+              class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-red-50"
+            >
+              🔐
+            </div>
+            <h3 class="text-sm font-bold text-gray-800 leading-tight">
+              Cybersecurity
+            </h3>
+            <p class="text-xs text-gray-400">Ethical Hacking</p>
+            <span class="text-xs font-bold text-blue-500">32 courses →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPCOMING COURSES -->
+    <section class="py-24 bg-gray-50" id="upcoming">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-200 text-xs font-bold tracking-widest uppercase text-yellow-600 mb-4"
+            >🔜 What's Coming</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            Upcoming <span class="grad-text">Courses</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            Pre-enroll now to lock in early-bird pricing and save up to 75%.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Upcoming Card 1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="h-40 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #1e1b4b, #4338ca, #6366f1);
+              "
+            >
+              <span class="text-5xl">🧠</span>
+              <span
+                class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-black bg-yellow-400 text-gray-900"
+                >Starting Apr 15</span
+              >
+            </div>
+            <div class="p-5">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-violet-500 mb-1.5"
+              >
+                Data Science & AI
+              </p>
+              <h3 class="text-base font-black leading-snug mb-3 text-gray-900">
+                AI & LLM Engineering Bootcamp 2025
+              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <div class="flex -space-x-2">
+                  <div
+                    class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-black text-white"
+                    style="
+                      background: linear-gradient(135deg, #059669, #10b981);
+                    "
+                  >
+                    SS
+                  </div>
+                  <div
+                    class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-black text-white"
+                    style="
+                      background: linear-gradient(135deg, #3b82f6, #6366f1);
+                    "
+                  >
+                    TA
+                  </div>
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Soumen Sen & Tahmid Alvee</span
+                >
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3 text-xs text-gray-500">
+                <span>⏱ 55 hrs</span><span>📘 220 lessons</span
+                ><span>🎯 8 projects</span>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div
+                  class="flex-1 h-1.5 rounded-full bg-gray-200 overflow-hidden"
+                >
+                  <div
+                    class="h-full rounded-full grad-btn"
+                    style="width: 68%"
+                  ></div>
+                </div>
+                <span
+                  class="text-xs text-gray-700 font-semibold whitespace-nowrap"
+                  >340/500 enrolled</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100"
+              >
+                <div>
+                  <span class="text-xl font-black text-yellow-500">৳1,799</span>
+                  <span class="text-xs text-gray-400 line-through ml-1"
+                    >৳6,999</span
+                  >
+                  <span
+                    class="text-xs font-bold text-emerald-500 ml-1 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >74% OFF</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-2 rounded-xl grad-btn text-white text-sm font-bold hover:opacity-90 transition"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Upcoming Card 2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="h-40 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #1c1917, #44403c, #78716c);
+              "
+            >
+              <span class="text-5xl">🕹️</span>
+              <span
+                class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-black bg-yellow-400 text-gray-900"
+                >Starting May 1</span
+              >
+            </div>
+            <div class="p-5">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-yellow-600 mb-1.5"
+              >
+                Game Development
+              </p>
+              <h3 class="text-base font-black leading-snug mb-3 text-gray-900">
+                Unity Game Development — 2D & 3D Mastery
+              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <div
+                  class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-black text-white"
+                  style="background: linear-gradient(135deg, #4f46e5, #818cf8)"
+                >
+                  MrA
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Mashrafe Abrar</span
+                >
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3 text-xs text-gray-500">
+                <span>⏱ 48 hrs</span><span>📘 192 lessons</span
+                ><span>🎯 5 projects</span>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div
+                  class="flex-1 h-1.5 rounded-full bg-gray-200 overflow-hidden"
+                >
+                  <div
+                    class="h-full rounded-full grad-btn"
+                    style="width: 52%"
+                  ></div>
+                </div>
+                <span
+                  class="text-xs text-gray-700 font-semibold whitespace-nowrap"
+                  >210/400 enrolled</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100"
+              >
+                <div>
+                  <span class="text-xl font-black text-yellow-500">৳1,499</span>
+                  <span class="text-xs text-gray-400 line-through ml-1"
+                    >৳5,999</span
+                  >
+                  <span
+                    class="text-xs font-bold text-emerald-500 ml-1 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >75% OFF</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-2 rounded-xl grad-btn text-white text-sm font-bold hover:opacity-90 transition"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Upcoming Card 3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div
+              class="h-40 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #064e3b, #065f46, #059669);
+              "
+            >
+              <span class="text-5xl">📦</span>
+              <span
+                class="absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-black bg-yellow-400 text-gray-900"
+                >Starting May 20</span
+              >
+            </div>
+            <div class="p-5">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-emerald-600 mb-1.5"
+              >
+                Web Development
+              </p>
+              <h3 class="text-base font-black leading-snug mb-3 text-gray-900">
+                Full-Stack Web3 & Blockchain Development
+              </h3>
+              <div class="flex items-center gap-2 mb-3">
+                <div class="flex -space-x-2">
+                  <div
+                    class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-black text-white"
+                    style="
+                      background: linear-gradient(135deg, #0e7490, #22d3ee);
+                    "
+                  >
+                    DB
+                  </div>
+                  <div
+                    class="w-7 h-7 rounded-full border-2 border-white flex items-center justify-center text-xs font-black text-white"
+                    style="
+                      background: linear-gradient(135deg, #b45309, #f59e0b);
+                    "
+                  >
+                    TO
+                  </div>
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Debojit & Tokitul</span
+                >
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3 text-xs text-gray-500">
+                <span>⏱ 52 hrs</span><span>📘 208 lessons</span
+                ><span>🎯 6 projects</span>
+              </div>
+              <div class="flex items-center gap-2 mb-4">
+                <div
+                  class="flex-1 h-1.5 rounded-full bg-gray-200 overflow-hidden"
+                >
+                  <div
+                    class="h-full rounded-full grad-btn"
+                    style="width: 51%"
+                  ></div>
+                </div>
+                <span
+                  class="text-xs text-gray-700 font-semibold whitespace-nowrap"
+                  >180/350 enrolled</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100"
+              >
+                <div>
+                  <span class="text-xl font-black text-yellow-500">৳1,999</span>
+                  <span class="text-xs text-gray-400 line-through ml-1"
+                    >৳7,999</span
+                  >
+                  <span
+                    class="text-xs font-bold text-emerald-500 ml-1 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >75% OFF</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-2 rounded-xl grad-btn text-white text-sm font-bold hover:opacity-90 transition"
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR COURSES -->
+    <section class="py-24 bg-white" id="courses-section">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-200 text-xs font-bold tracking-widest uppercase text-yellow-600 mb-4"
+            >🔥 Top Picks</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            Most Popular <span class="grad-text">Courses</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            Handpicked courses loved by thousands of students and industry
+            experts.
+          </p>
+        </div>
+        <!-- Filter tabs -->
+        <div class="flex items-center justify-center flex-wrap gap-2 mb-10">
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold grad-btn text-white shadow-lg shadow-blue-500/20"
+          >
+            All Courses
+          </button>
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 bg-white border border-gray-200 hover:text-blue-500 transition"
+          >
+            Web Development
+          </button>
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 bg-white border border-gray-200 hover:text-blue-500 transition"
+          >
+            Design
+          </button>
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 bg-white border border-gray-200 hover:text-blue-500 transition"
+          >
+            Data Science
+          </button>
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 bg-white border border-gray-200 hover:text-blue-500 transition"
+          >
+            Mobile
+          </button>
+          <button
+            class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 bg-white border border-gray-200 hover:text-blue-500 transition"
+          >
+            Cloud
+          </button>
+        </div>
+        <!-- Courses grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+          <!-- Course Card 1 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #0d1b4b, #1e3a8a, #4f46e5);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">⚛️</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-yellow-400 text-gray-900"
+                >Bestseller</span
+              >
+              <div
+                class="absolute top-3 right-3 px-2 py-1 rounded-full flex items-center gap-1.5 text-xs font-black text-teal-400 bg-teal-400/10 border border-teal-400/30"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-teal-400 live-pulse"
+                ></span
+                >LIVE
+              </div>
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-violet-500 mb-1.5"
+              >
+                Web Development
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                Complete React & Next.js Developer — Zero to Pro
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #3b82f6, #6366f1)"
+                >
+                  TA
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Tahmid Alvee</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(2,413)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 42 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 185 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳1,299</span>
+                  <span class="text-xs text-gray-400 line-through">৳4,999</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >74%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 2 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #2d1b69, #6d28d9, #a855f7);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">🎨</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-emerald-400 text-gray-900"
+                >New</span
+              >
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-purple-500 mb-1.5"
+              >
+                UI/UX Design
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                UI/UX Design Masterclass with Figma
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #7c3aed, #a855f7)"
+                >
+                  NU
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Nazim Uddin</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.8</span>
+                <span class="text-xs text-gray-400">(1,872)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 36 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 142 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳999</span>
+                  <span class="text-xs text-gray-400 line-through">৳3,999</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >75%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 3 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #052e16, #065f46, #10b981);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">🤖</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-rose-400 text-white"
+                >Hot 🔥</span
+              >
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-emerald-600 mb-1.5"
+              >
+                Data Science & AI
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                Python & Machine Learning A–Z Bootcamp
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #059669, #10b981)"
+                >
+                  SS
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Soumen Sen</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(3,104)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 58 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 240 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳1,499</span>
+                  <span class="text-xs text-gray-400 line-through">৳5,999</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >75%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 4 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #451a03, #92400e, #f59e0b);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">🚀</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-yellow-400 text-gray-900"
+                >Bestseller</span
+              >
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-yellow-600 mb-1.5"
+              >
+                Web Development
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                Node.js, Express & MongoDB Mastery
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #d97706, #f59e0b)"
+                >
+                  RA
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Rashed Ali</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.7</span>
+                <span class="text-xs text-gray-400">(1,560)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 48 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 196 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳1,199</span>
+                  <span class="text-xs text-gray-400 line-through">৳4,499</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >73%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 5 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #4c0519, #9f1239, #f43f5e);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">📱</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-emerald-400 text-gray-900"
+                >New</span
+              >
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-rose-500 mb-1.5"
+              >
+                Mobile Development
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                Flutter & Dart — iOS & Android Apps
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #e11d48, #f43f5e)"
+                >
+                  TM
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Tasin Ibn Musahar</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.8</span>
+                <span class="text-xs text-gray-400">(987)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 38 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 158 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳899</span>
+                  <span class="text-xs text-gray-400 line-through">৳3,499</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >74%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Course Card 6 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-1 hover:shadow-xl transition cursor-pointer"
+          >
+            <div
+              class="h-44 flex items-center justify-center relative"
+              style="
+                background: linear-gradient(135deg, #082f49, #0c4a6e, #0ea5e9);
+              "
+            >
+              <span class="text-5xl group-hover:scale-110 transition">☁️</span>
+              <span
+                class="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-black bg-rose-400 text-white"
+                >Hot 🔥</span
+              >
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"
+              >
+                <button
+                  class="bg-white text-violet-700 px-5 py-2 rounded-xl text-sm font-bold"
+                >
+                  ▶ Preview
+                </button>
+              </div>
+            </div>
+            <div class="p-5 flex flex-col flex-1">
+              <p
+                class="text-xs font-black uppercase tracking-wider text-cyan-500 mb-1.5"
+              >
+                Cloud & DevOps
+              </p>
+              <h3
+                class="text-sm font-bold leading-snug mb-2.5 text-gray-900 line-clamp-2"
+              >
+                AWS Solutions Architect Certification
+              </h3>
+              <div class="flex items-center gap-2 mb-2">
+                <div
+                  class="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white"
+                  style="background: linear-gradient(135deg, #0284c7, #0ea5e9)"
+                >
+                  SP
+                </div>
+                <span class="text-xs text-gray-500 font-semibold"
+                  >Sudipta Pal</span
+                >
+              </div>
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(2,780)</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mb-4">
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >⏱ 52 hrs</span
+                >
+                <span
+                  class="px-2 py-0.5 rounded-full text-xs text-gray-500 bg-gray-100"
+                  >📘 210 lessons</span
+                >
+              </div>
+              <div
+                class="flex items-center justify-between pt-3 border-t border-gray-100 mt-auto"
+              >
+                <div class="flex items-baseline gap-2">
+                  <span class="text-lg font-black text-gray-900">৳1,399</span>
+                  <span class="text-xs text-gray-400 line-through">৳5,499</span>
+                  <span
+                    class="text-xs font-bold text-emerald-500 px-1.5 py-0.5 rounded bg-emerald-50"
+                    >75%</span
+                  >
+                </div>
+                <button
+                  class="px-4 py-1.5 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+                >
+                  Enroll Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 text-gray-600 font-semibold hover:border-blue-400 hover:text-blue-500 transition"
+            >View All 500+ Courses →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="py-24 bg-gray-50" id="why">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Left -->
+          <div>
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-xs font-bold tracking-widest uppercase text-emerald-600 mb-5"
+              >✨ Why VeeLearn</span
+            >
+            <h2 class="text-4xl font-black tracking-tight mb-4 text-gray-900">
+              Everything You Need to<br /><span class="grad-text"
+                >Succeed in Tech</span
+              >
+            </h2>
+            <p class="text-gray-500 mb-10 leading-relaxed">
+              We built VeeLearn to help real people land real jobs through
+              practical, project-based learning.
+            </p>
+            <div class="flex flex-col gap-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 bg-blue-50"
+                >
+                  🎓
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1 text-gray-800">
+                    Expert Instructors
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Learn from professionals with 5–12 years of real industry
+                    experience at top companies.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 bg-yellow-50"
+                >
+                  📜
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1 text-gray-800">
+                    Industry Certificates
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Verified, LinkedIn-ready certificates that employers
+                    actually care about.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 bg-emerald-50"
+                >
+                  ♾️
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1 text-gray-800">Lifetime Access</h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Pay once, learn forever. All course updates included at zero
+                    extra cost.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 bg-indigo-50"
+                >
+                  📱
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1 text-gray-800">
+                    Learn Anywhere, Anytime
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Fully mobile-optimised with offline download support.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0 bg-rose-50"
+                >
+                  💬
+                </div>
+                <div>
+                  <h4 class="font-bold mb-1 text-gray-800">
+                    Community & Mentorship
+                  </h4>
+                  <p class="text-sm text-gray-500 leading-relaxed">
+                    Join our 10,000-student Discord. Share projects, get
+                    feedback, grow together.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right stats -->
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="rounded-2xl p-6 text-white"
+              style="background: linear-gradient(135deg, #1e3a8a, #1d4ed8)"
+            >
+              <span class="text-3xl block mb-2">🎓</span>
+              <span class="block text-4xl font-black tracking-tight"
+                >10,000+</span
+              >
+              <span class="block text-sm opacity-80 mt-1"
+                >Students Enrolled</span
+              >
+            </div>
+            <div
+              class="rounded-2xl p-6 text-white"
+              style="background: linear-gradient(135deg, #92400e, #d97706)"
+            >
+              <span class="text-3xl block mb-2">⭐</span>
+              <span class="block text-4xl font-black tracking-tight"
+                >4.9 / 5</span
+              >
+              <span class="block text-sm opacity-80 mt-1">Average Rating</span>
+            </div>
+            <div
+              class="rounded-2xl p-6 text-white"
+              style="background: linear-gradient(135deg, #065f46, #059669)"
+            >
+              <span class="text-3xl block mb-2">👨‍🏫</span>
+              <span class="block text-4xl font-black tracking-tight">50+</span>
+              <span class="block text-sm opacity-80 mt-1"
+                >Expert Instructors</span
+              >
+            </div>
+            <div
+              class="rounded-2xl p-6 text-white"
+              style="background: linear-gradient(135deg, #9f1239, #e11d48)"
+            >
+              <span class="text-3xl block mb-2">🏆</span>
+              <span class="block text-4xl font-black tracking-tight">95%</span>
+              <span class="block text-sm opacity-80 mt-1"
+                >Job Placement Rate</span
+              >
+            </div>
+            <div
+              class="rounded-2xl p-6 text-white col-span-2"
+              style="background: linear-gradient(135deg, #1e40af, #3b82f6)"
+            >
+              <span class="text-3xl block mb-2">🌍</span>
+              <span class="block text-4xl font-black tracking-tight"
+                >30+ Countries</span
+              >
+              <span class="block text-sm opacity-80 mt-1"
+                >Students learning worldwide</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTRUCTORS -->
+    <section class="py-24 bg-white" id="instructors">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-violet-50 border border-violet-200 text-xs font-bold tracking-widest uppercase text-violet-500 mb-4"
+            >👨‍🏫 Meet the Experts</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            Learn from the <span class="grad-text">Best Instructors</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            Our instructors are working professionals who bring real-world
+            experience into every lesson.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+          <!-- Instructor 1 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div class="pt-7 flex justify-center">
+              <div class="relative w-20 h-20">
+                <div
+                  class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-black text-white relative spin-ring"
+                  style="background: linear-gradient(135deg, #3b82f6, #6366f1)"
+                >
+                  TA
+                </div>
+                <span
+                  class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white pulse-dot"
+                ></span>
+              </div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-base font-black mb-1 text-gray-900">
+                Tahmid Alvee
+              </h3>
+              <span class="block text-xs font-bold text-blue-500 mb-2"
+                >Full-Stack Developer & CEO</span
+              >
+              <p class="text-xs text-gray-500 leading-relaxed mb-3">
+                CEO of VeeLearn. 10+ years building scalable systems. MERN,
+                system design & cloud expert.
+              </p>
+              <div class="flex items-center justify-center gap-1.5 mb-3">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(2,413)</span>
+              </div>
+              <div
+                class="flex justify-center gap-1.5 py-3 border-y border-gray-100 mb-3"
+              >
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >12</strong
+                  >
+                  <span class="text-xs text-gray-400">Courses</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >4.2K+</strong
+                  >
+                  <span class="text-xs text-gray-400">Students</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >10 yrs</strong
+                  >
+                  <span class="text-xs text-gray-400">Exp</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-blue-500 bg-blue-50"
+                  >React</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-blue-500 bg-blue-50"
+                  >Node.js</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-blue-500 bg-blue-50"
+                  >MongoDB</span
+                >
+              </div>
+              <button
+                class="w-full py-2 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+              >
+                View Full Profile →
+              </button>
+            </div>
+          </div>
+          <!-- Instructor 2 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div class="pt-7 flex justify-center">
+              <div class="relative w-20 h-20">
+                <div
+                  class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-black text-white relative spin-ring"
+                  style="background: linear-gradient(135deg, #7c3aed, #a855f7)"
+                >
+                  NU
+                </div>
+                <span
+                  class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white pulse-dot"
+                ></span>
+              </div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-base font-black mb-1 text-gray-900">
+                Nazim Uddin
+              </h3>
+              <span class="block text-xs font-bold text-violet-500 mb-2"
+                >UI/UX Design Lead</span
+              >
+              <p class="text-xs text-gray-500 leading-relaxed mb-3">
+                Former Design Lead at Figma. Helped 3,100+ designers master
+                Figma and land top product jobs.
+              </p>
+              <div class="flex items-center justify-center gap-1.5 mb-3">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.8</span>
+                <span class="text-xs text-gray-400">(1,872)</span>
+              </div>
+              <div
+                class="flex justify-center gap-1.5 py-3 border-y border-gray-100 mb-3"
+              >
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >8</strong
+                  >
+                  <span class="text-xs text-gray-400">Courses</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >3.1K+</strong
+                  >
+                  <span class="text-xs text-gray-400">Students</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >8 yrs</strong
+                  >
+                  <span class="text-xs text-gray-400">Exp</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-violet-500 bg-violet-50"
+                  >Figma</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-violet-500 bg-violet-50"
+                  >Prototyping</span
+                >
+              </div>
+              <button
+                class="w-full py-2 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+              >
+                View Full Profile →
+              </button>
+            </div>
+          </div>
+          <!-- Instructor 3 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div class="pt-7 flex justify-center">
+              <div class="relative w-20 h-20">
+                <div
+                  class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-black text-white relative spin-ring"
+                  style="background: linear-gradient(135deg, #059669, #10b981)"
+                >
+                  SS
+                </div>
+                <span
+                  class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white pulse-dot"
+                ></span>
+              </div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-base font-black mb-1 text-gray-900">
+                Soumen Sen
+              </h3>
+              <span class="block text-xs font-bold text-emerald-600 mb-2"
+                >Data Scientist & ML Engineer</span
+              >
+              <p class="text-xs text-gray-500 leading-relaxed mb-3">
+                PhD in CS. Previously at Meta AI & DeepMind. Expert in Python,
+                ML, and deep learning.
+              </p>
+              <div class="flex items-center justify-center gap-1.5 mb-3">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(3,104)</span>
+              </div>
+              <div
+                class="flex justify-center gap-1.5 py-3 border-y border-gray-100 mb-3"
+              >
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >15</strong
+                  >
+                  <span class="text-xs text-gray-400">Courses</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >5.8K+</strong
+                  >
+                  <span class="text-xs text-gray-400">Students</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >12 yrs</strong
+                  >
+                  <span class="text-xs text-gray-400">Exp</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-emerald-600 bg-emerald-50"
+                  >Python</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-emerald-600 bg-emerald-50"
+                  >TensorFlow</span
+                >
+              </div>
+              <button
+                class="w-full py-2 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+              >
+                View Full Profile →
+              </button>
+            </div>
+          </div>
+          <!-- Instructor 4 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-xl transition"
+          >
+            <div class="pt-7 flex justify-center">
+              <div class="relative w-20 h-20">
+                <div
+                  class="w-20 h-20 rounded-full flex items-center justify-center text-2xl font-black text-white relative spin-ring"
+                  style="background: linear-gradient(135deg, #0284c7, #0ea5e9)"
+                >
+                  SP
+                </div>
+                <span
+                  class="absolute bottom-0 right-1 w-3.5 h-3.5 bg-emerald-400 rounded-full border-2 border-white pulse-dot"
+                ></span>
+              </div>
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="text-base font-black mb-1 text-gray-900">
+                Sudipta Pal
+              </h3>
+              <span class="block text-xs font-bold text-cyan-500 mb-2"
+                >Cloud & DevOps Architect</span
+              >
+              <p class="text-xs text-gray-500 leading-relaxed mb-3">
+                AWS Certified Solutions Architect. 12+ years at Amazon &
+                Netflix. Cloud infra specialist.
+              </p>
+              <div class="flex items-center justify-center gap-1.5 mb-3">
+                <span class="text-yellow-400 text-xs">★★★★★</span>
+                <span class="text-sm font-black text-yellow-500">4.9</span>
+                <span class="text-xs text-gray-400">(2,780)</span>
+              </div>
+              <div
+                class="flex justify-center gap-1.5 py-3 border-y border-gray-100 mb-3"
+              >
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >10</strong
+                  >
+                  <span class="text-xs text-gray-400">Courses</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >4.9K+</strong
+                  >
+                  <span class="text-xs text-gray-400">Students</span>
+                </div>
+                <div class="w-px h-8 bg-gray-200"></div>
+                <div class="text-center px-3">
+                  <strong class="block text-sm font-black text-gray-800"
+                    >12 yrs</strong
+                  >
+                  <span class="text-xs text-gray-400">Exp</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap justify-center gap-1.5 mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-cyan-500 bg-cyan-50"
+                  >AWS</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-cyan-500 bg-cyan-50"
+                  >Docker</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full text-xs font-bold text-cyan-500 bg-cyan-50"
+                  >K8s</span
+                >
+              </div>
+              <button
+                class="w-full py-2 rounded-xl text-xs font-bold text-blue-500 bg-blue-50 hover:bg-blue-500 hover:text-white transition"
+              >
+                View Full Profile →
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Become instructor CTA -->
+        <div
+          class="rounded-2xl p-8 flex items-center justify-between flex-wrap gap-6"
+          style="
+            background: linear-gradient(135deg, #eff6ff, #dbeafe, #bfdbfe);
+            border: 1px solid #93c5fd;
+          "
+        >
+          <div>
+            <h3 class="text-xl font-black mb-1 text-gray-900">
+              🚀 Are you a tech expert?
+            </h3>
+            <p class="text-sm text-gray-600 max-w-lg">
+              Share your knowledge and earn money by teaching on VeeLearn. 50+
+              instructors already earning thousands monthly.
+            </p>
+          </div>
+          <a
+            href="#login"
+            class="px-6 py-3 rounded-xl grad-btn text-white font-bold text-sm shadow-lg shadow-blue-500/25 hover:opacity-90 transition flex-shrink-0"
+            >Become an Instructor →</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-200 text-xs font-bold tracking-widest uppercase text-yellow-600 mb-4"
+            >💬 Student Stories</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            What Our <span class="grad-text">Learners Say</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            Real results from real students — see how VeeLearn changed their
+            lives.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <!-- Testi 1 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-7 relative overflow-hidden hover:-translate-y-1 transition shadow-sm"
+          >
+            <span
+              class="absolute top-0 right-4 text-8xl font-black text-blue-100 leading-none"
+              >"</span
+            >
+            <div class="text-yellow-400 text-sm mb-3">★★★★★</div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-6 italic">
+              VeeLearn's MERN Stack course completely changed my career. Within
+              3 months I landed a junior developer job with a 60% salary
+              increase.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-11 h-11 rounded-full flex items-center justify-center font-black text-white text-sm"
+                style="background: linear-gradient(135deg, #3b82f6, #6366f1)"
+              >
+                FA
+              </div>
+              <div>
+                <span class="block font-black text-sm text-gray-900"
+                  >Farhan Ahmed</span
+                >
+                <span class="block text-xs text-gray-400"
+                  >Junior Developer @ TechDhaka</span
+                >
+                <span class="block text-xs text-blue-500 mt-0.5"
+                  >📘 MERN Stack Bootcamp</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testi 2 (featured) -->
+          <div
+            class="rounded-2xl p-7 relative overflow-hidden hover:-translate-y-1 transition shadow-md"
+            style="
+              background: linear-gradient(145deg, #1e1b4b, #312e81, #3730a3);
+            "
+          >
+            <span
+              class="absolute top-0 right-4 text-8xl font-black leading-none"
+              style="color: rgba(255, 255, 255, 0.06)"
+              >"</span
+            >
+            <div class="text-yellow-300 text-sm mb-3">★★★★★</div>
+            <p class="text-sm leading-relaxed mb-6 italic text-white/80">
+              The Figma & UI/UX course was the most practical I've ever taken.
+              My freelance income tripled within 2 months of finishing. Worth
+              every single taka!
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-11 h-11 rounded-full flex items-center justify-center font-black text-white text-sm bg-white/20"
+              >
+                TK
+              </div>
+              <div>
+                <span class="block font-black text-sm text-white"
+                  >Tasnim Khan</span
+                >
+                <span class="block text-xs text-white/50"
+                  >Freelance UI Designer</span
+                >
+                <span class="block text-xs mt-0.5 text-white/40"
+                  >📘 UI/UX Design Masterclass</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testi 3 -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-7 relative overflow-hidden hover:-translate-y-1 transition shadow-sm"
+          >
+            <span
+              class="absolute top-0 right-4 text-8xl font-black text-blue-100 leading-none"
+              >"</span
+            >
+            <div class="text-yellow-400 text-sm mb-3">★★★★★</div>
+            <p class="text-sm text-gray-500 leading-relaxed mb-6 italic">
+              I went from zero Python knowledge to passing the AWS ML Specialty
+              exam in just 6 months. Best structured course I've ever taken
+              online.
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-11 h-11 rounded-full flex items-center justify-center font-black text-white text-sm"
+                style="background: linear-gradient(135deg, #059669, #10b981)"
+              >
+                RI
+              </div>
+              <div>
+                <span class="block font-black text-sm text-gray-900"
+                  >Rahim Islam</span
+                >
+                <span class="block text-xs text-gray-400"
+                  >ML Engineer @ DataCorp</span
+                >
+                <span class="block text-xs text-blue-500 mt-0.5"
+                  >📘 Python & ML Bootcamp</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="py-24 bg-white" id="pricing">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold tracking-widest uppercase text-blue-500 mb-4"
+            >💰 Simple Pricing</span
+          >
+          <h2 class="text-4xl font-black tracking-tight mb-3 text-gray-900">
+            Choose Your <span class="grad-text">Learning Plan</span>
+          </h2>
+          <p class="text-gray-500 max-w-md mx-auto">
+            No hidden fees. Cancel anytime. Start completely free.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5 items-start mb-6">
+          <!-- Starter -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-8 hover:-translate-y-1 transition shadow-sm"
+          >
+            <span class="text-4xl block mb-3">🌱</span>
+            <h3 class="text-xl font-black mb-1 text-gray-900">Starter</h3>
+            <p class="text-sm text-gray-500 mb-6">
+              Perfect for beginners exploring tech
+            </p>
+            <div
+              class="flex items-baseline gap-1 mb-6 pb-6 border-b border-gray-100"
+            >
+              <span class="text-xl font-bold text-gray-700">৳</span>
+              <span class="text-5xl font-black tracking-tight text-gray-900"
+                >0</span
+              >
+              <span class="text-sm text-gray-400">/ forever</span>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 text-sm text-gray-700">
+              <li>✅ 10 free courses access</li>
+              <li>✅ Community Discord access</li>
+              <li>✅ Course preview videos</li>
+              <li>✅ Basic completion certificates</li>
+              <li class="text-gray-400">❌ Full 500+ course library</li>
+              <li class="text-gray-400">❌ Mentor 1-on-1 sessions</li>
+              <li class="text-gray-400">❌ Downloadable resources</li>
+            </ul>
+            <a
+              href="#login"
+              class="block w-full py-3 rounded-xl text-center font-bold border border-blue-400 text-blue-500 hover:bg-blue-50 transition"
+              >Get Started Free</a
+            >
+          </div>
+          <!-- Pro (featured) -->
+          <div
+            class="rounded-2xl p-8 relative hover:-translate-y-1 transition shadow-xl"
+            style="
+              background: linear-gradient(145deg, #1e3a8a, #1d4ed8, #2563eb);
+              transform: scale(1.04);
+            "
+          >
+            <div
+              class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-5 py-1.5 rounded-full text-xs font-black bg-yellow-400 text-gray-900 shadow-lg shadow-yellow-400/30 whitespace-nowrap"
+            >
+              ⭐ Most Popular
+            </div>
+            <span class="text-4xl block mb-3">🚀</span>
+            <h3 class="text-xl font-black mb-1 text-white">Pro Learner</h3>
+            <p class="text-sm mb-6 text-blue-100/70">
+              For serious learners who want results
+            </p>
+            <div
+              class="flex items-baseline gap-1 mb-6 pb-6 border-b border-white/10"
+            >
+              <span class="text-xl font-bold text-yellow-300">৳</span>
+              <span class="text-5xl font-black tracking-tight text-white"
+                >799</span
+              >
+              <span class="text-sm text-white/55">/ month</span>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 text-sm text-white/90">
+              <li>✅ All 500+ courses access</li>
+              <li>✅ Industry certificates</li>
+              <li>✅ Monthly 1-on-1 mentorship</li>
+              <li>✅ All downloadable resources</li>
+              <li>✅ Offline video access</li>
+              <li>✅ Priority Q&A support</li>
+              <li>✅ Job placement assistance</li>
+            </ul>
+            <a
+              href="#login"
+              class="block w-full py-3 rounded-xl text-center font-bold bg-white text-blue-900 hover:bg-blue-50 transition"
+              >Start Pro — ৳799/mo →</a
+            >
+          </div>
+          <!-- Business -->
+          <div
+            class="bg-white border border-gray-200 rounded-2xl p-8 hover:-translate-y-1 transition shadow-sm"
+          >
+            <span class="text-4xl block mb-3">🏢</span>
+            <h3 class="text-xl font-black mb-1 text-gray-900">
+              Team / Business
+            </h3>
+            <p class="text-sm text-gray-500 mb-6">
+              For companies upskilling their teams
+            </p>
+            <div
+              class="flex items-baseline gap-1 mb-6 pb-6 border-b border-gray-100"
+            >
+              <span class="text-xl font-bold text-gray-700">৳</span>
+              <span class="text-5xl font-black tracking-tight text-gray-900"
+                >499</span
+              >
+              <span class="text-sm text-gray-400">/ user / mo</span>
+            </div>
+            <ul class="flex flex-col gap-3 mb-8 text-sm text-gray-700">
+              <li>✅ Everything in Pro</li>
+              <li>✅ Team admin dashboard</li>
+              <li>✅ Progress & analytics</li>
+              <li>✅ Custom learning paths</li>
+              <li>✅ Dedicated account manager</li>
+              <li>✅ Bulk certificate issuance</li>
+              <li>✅ API & SSO integration</li>
+            </ul>
+            <a
+              href="mailto:sales@veelearn.com"
+              class="block w-full py-3 rounded-xl text-center font-bold border border-blue-400 text-blue-500 hover:bg-blue-50 transition"
+              >Contact Sales →</a
+            >
+          </div>
+        </div>
+        <p class="text-center text-sm text-gray-500">
+          🛡️ All paid plans include a
+          <strong class="text-gray-800">30-day money-back guarantee</strong>. No
+          questions asked.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section
+      class="py-24 relative overflow-hidden"
+      style="
+        background: linear-gradient(
+          135deg,
+          #eff6ff 0%,
+          #dbeafe 50%,
+          #c7d2fe 100%
+        );
+      "
+    >
+      <div class="max-w-2xl mx-auto px-6 text-center">
+        <span
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 text-xs font-bold tracking-widest uppercase text-blue-500 mb-5"
+          >🎯 Start Today</span
+        >
+        <h2
+          class="text-5xl font-black tracking-tight leading-tight mb-5 text-gray-900"
+        >
+          Ready to Transform<br /><span class="grad-text"
+            >Your Career in Tech?</span
+          >
+        </h2>
+        <p class="text-gray-600 leading-relaxed mb-10">
+          Join 10,000+ students already building their dream careers with
+          VeeLearn. Your first course is completely free — no credit card
+          required.
+        </p>
+        <div class="flex items-center justify-center gap-4 flex-wrap mb-7">
+          <a
+            href="#login"
+            class="px-7 py-3.5 rounded-xl grad-btn text-white font-bold shadow-lg shadow-blue-500/25 hover:opacity-90 transition"
+            >Get Started Free →</a
+          >
+          <a
+            href="#courses-section"
+            class="px-7 py-3.5 rounded-xl border border-gray-300 bg-white text-gray-700 font-semibold hover:border-blue-400 hover:text-blue-500 transition"
+            >Browse All Courses</a
+          >
+        </div>
+        <div class="flex items-center justify-center flex-wrap gap-6">
+          <span class="text-sm text-gray-500">✓ No credit card needed</span>
+          <span class="text-sm text-gray-500">✓ Cancel anytime</span>
+          <span class="text-sm text-gray-500">✓ 30-day money back</span>
+          <span class="text-sm text-gray-500">✓ Lifetime access</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-6 py-20 border-b border-white/10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-11">
+          <!-- Brand col -->
+          <div>
+            <div class="flex items-center gap-2.5 mb-4">
+              <div
+                class="w-8 h-8 grad-btn rounded-lg flex items-center justify-center text-white font-black text-sm"
+              >
+                V
+              </div>
+              <span class="text-xl font-black text-white"
+                >Vee<span class="text-blue-400">Learn</span></span
+              >
+            </div>
+            <p class="text-sm leading-relaxed mb-5 max-w-xs text-gray-400">
+              VeeLearn is Bangladesh's leading online tech learning platform. We
+              help enthusiasts build real skills and land real jobs.
+            </p>
+            <div class="flex gap-2 mb-5">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-sm bg-white/10 border border-white/10 text-gray-400 hover:text-white hover:-translate-y-0.5 transition"
+                >f</a
+              >
+              <a
+                href="https://x.com"
+                target="_blank"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-sm bg-white/10 border border-white/10 text-gray-400 hover:text-white hover:-translate-y-0.5 transition"
+                >𝕏</a
+              >
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-sm bg-white/10 border border-white/10 text-gray-400 hover:text-white hover:-translate-y-0.5 transition"
+                >in</a
+              >
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-sm bg-white/10 border border-white/10 text-gray-400 hover:text-white hover:-translate-y-0.5 transition"
+                >▶</a
+              >
+            </div>
+            <div class="flex gap-2">
+              <a
+                href="#"
+                class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/10 border border-white/10 text-gray-400 hover:text-white transition"
+                >📱 App Store</a
+              >
+              <a
+                href="#"
+                class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/10 border border-white/10 text-gray-400 hover:text-white transition"
+                >🤖 Google Play</a
+              >
+            </div>
+          </div>
+          <!-- Courses col -->
+          <div>
+            <h4 class="text-sm font-black text-white mb-5">Courses</h4>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Web Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >UI/UX Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Data Science & AI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Mobile Development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Cloud & DevOps</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Cybersecurity</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#courses-section"
+                  class="text-sm font-bold text-blue-400 hover:pl-1 transition-all"
+                  >All Courses →</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Company col -->
+          <div>
+            <h4 class="text-sm font-black text-white mb-5">Company</h4>
+            <ul class="flex flex-col gap-3">
+              <li>
+                <a
+                  href="#about"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Careers — Hiring! 🔥</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Student Success Stories</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Press & Media</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-sm text-gray-400 hover:text-white hover:pl-1 transition-all"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Newsletter + Contact -->
+          <div>
+            <h4 class="text-sm font-black text-white mb-3">Stay Updated</h4>
+            <p class="text-xs leading-relaxed mb-4 text-gray-400">
+              Get weekly tips, new course drops, and exclusive deals.
+            </p>
+            <div class="flex flex-col gap-2 mb-2">
+              <input
+                type="email"
+                placeholder="your@email.com"
+                class="rounded-xl px-4 py-2.5 text-sm text-white bg-white/10 border border-white/10 outline-none focus:border-blue-500 transition placeholder:text-gray-500"
+              />
+              <button
+                class="grad-btn text-white text-sm font-bold py-2.5 rounded-xl hover:opacity-90 transition"
+              >
+                Subscribe →
+              </button>
+            </div>
+            <p class="text-xs mb-5 text-gray-500">
+              📬 No spam, ever. Unsubscribe anytime.
+            </p>
+            <!-- Contact card -->
+            <div
+              class="rounded-xl overflow-hidden bg-white/5 border border-white/10"
+            >
+              <a
+                href="mailto:hello@veelearn.com"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-blue-400/10 transition border-b border-white/5"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-base flex-shrink-0 bg-blue-500/10 border border-blue-500/20"
+                >
+                  ✉️
+                </div>
+                <div>
+                  <span
+                    class="block text-xs font-bold uppercase tracking-wider text-gray-500"
+                    >Email Us</span
+                  >
+                  <span class="text-xs text-gray-300">hello@veelearn.com</span>
+                </div>
+              </a>
+              <a
+                href="tel:+8801700000000"
+                class="flex items-center gap-3 px-4 py-3 hover:bg-blue-400/10 transition border-b border-white/5"
+              >
+                <div
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-base flex-shrink-0 bg-blue-500/10 border border-blue-500/20"
+                >
+                  📞
+                </div>
+                <div>
+                  <span
+                    class="block text-xs font-bold uppercase tracking-wider text-gray-500"
+                    >Call Us</span
+                  >
+                  <span class="text-xs text-gray-300">+880 1700-000000</span>
+                </div>
+              </a>
+              <div class="flex items-center gap-3 px-4 py-3">
+                <div
+                  class="w-8 h-8 rounded-lg flex items-center justify-center text-base flex-shrink-0 bg-blue-500/10 border border-blue-500/20"
+                >
+                  📍
+                </div>
+                <div>
+                  <span
+                    class="block text-xs font-bold uppercase tracking-wider text-gray-500"
+                    >Our Office</span
+                  >
+                  <span class="text-xs text-gray-300">Dhaka, Bangladesh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer bottom -->
+      <div
+        class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between flex-wrap gap-3"
+      >
+        <p class="text-xs text-gray-500">
+          © 2025 VeeLearn. All rights reserved. Made with ❤️ in Bangladesh.
+        </p>
+        <div class="flex items-center gap-5">
+          <a href="#" class="text-xs text-gray-500 hover:text-white transition"
+            >Privacy Policy</a
+          >
+          <a href="#" class="text-xs text-gray-500 hover:text-white transition"
+            >Terms of Service</a
+          >
+          <a href="#" class="text-xs text-gray-500 hover:text-white transition"
+            >Cookie Policy</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a
+      id="backToTop"
+      href="#"
+      class="fixed bottom-7 right-7 w-11 h-11 rounded-full grad-btn text-white flex items-center justify-center shadow-lg shadow-blue-500/30 hover:-translate-y-1 transition text-lg z-30"
+      style="display: none"
+      >↑</a
+    >
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobileMenu"
+      class="hidden fixed top-0 left-0 w-full h-full bg-white z-50 flex flex-col px-6 py-8"
+    >
+      <div class="flex items-center justify-between mb-10">
+        <div class="flex items-center gap-2.5">
+          <div
+            class="w-9 h-9 grad-btn rounded-lg flex items-center justify-center text-white font-black text-lg"
+          >
+            V
+          </div>
+          <span class="text-xl font-black text-gray-900"
+            >Vee<span class="text-blue-500">Learn</span></span
+          >
+        </div>
+        <button
+          id="closeMenu"
+          class="w-9 h-9 bg-gray-100 rounded-lg flex items-center justify-center text-gray-600 text-xl"
+        >
+          ✕
+        </button>
+      </div>
+      <nav class="flex flex-col gap-2">
+        <a
+          href="#"
+          onclick="closeMenuFn()"
+          class="px-4 py-3 rounded-xl text-base font-semibold text-blue-500 bg-blue-50"
+          >Home</a
+        >
+        <a
+          href="#courses-section"
+          onclick="closeMenuFn()"
+          class="px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:bg-gray-100"
+          >Courses</a
+        >
+        <a
+          href="#about"
+          onclick="closeMenuFn()"
+          class="px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:bg-gray-100"
+          >About Us</a
+        >
+        <a
+          href="#instructors"
+          onclick="closeMenuFn()"
+          class="px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:bg-gray-100"
+          >Instructors</a
+        >
+        <a
+          href="#pricing"
+          onclick="closeMenuFn()"
+          class="px-4 py-3 rounded-xl text-base font-semibold text-gray-700 hover:bg-gray-100"
+          >Pricing</a
+        >
+      </nav>
+      <div class="mt-auto flex flex-col gap-3">
+        <a
+          href="#login"
+          class="w-full py-3 rounded-xl text-center font-bold border border-blue-400 text-blue-500"
+          >Log In</a
+        >
+        <a
+          href="#login"
+          class="w-full py-3 rounded-xl text-center font-bold grad-btn text-white"
+          >Start Free →</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
